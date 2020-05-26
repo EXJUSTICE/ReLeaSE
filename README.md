@@ -60,3 +60,5 @@ If you use this code or data, please cite:
 
 ### ReLeaSE method paper:
 Mariya Popova, Olexandr Isayev, Alexander Tropsha. *Deep Reinforcement Learning for de-novo Drug Design*. Science Advances, 2018, Vol. 4, no. 7, eaap7885. DOI: [10.1126/sciadv.aap7885](http://dx.doi.org/10.1126/sciadv.aap7885)
+
+test
