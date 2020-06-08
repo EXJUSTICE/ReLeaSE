@@ -39,7 +39,6 @@ python -m ipykernel install --user --name release --display-name ReLeaSE
 ```
 ## Contents
 *  `stackRNN.py`<br/>Defines the architecture and methods of the generator model. Includes codes for supervised training for the pre-trianing process, and SMILES string generation for the maining RL loop.
-
 *  `iterator.py`<br/>Abstract base class for SMILES string iteration
 *  `rnn_predictor.py`<br/> Trained predictor class for properties based on SMILES input. Works in tandem with `predictor.py`, which handles QSAR property prediction specifically.
 *  `reinforcement.py`<br/> Environment class. Defines the chemical methods and markov decision process for molecular generation. In this repo, also intializes agent and allows access to training methods. Note that reward implementation is provided in the example notebooks, as this class only provides the abstract implementation
@@ -48,10 +47,10 @@ python -m ipykernel install --user --name release --display-name ReLeaSE
 ## Demos
 
 We uploaded several demos in a form of iPython notebooks:
-* JAK2_min_max_demo.ipynb -- [JAK2](https://www.ebi.ac.uk/chembl/target/inspect/CHEMBL2363062) pIC50 minimization and maximization
-* LogP_optimization_demo.ipynb -- optimization of logP to be in a drug-like region 
+* `JAK2_min_max_demo.ipynb` -- [JAK2](https://www.ebi.ac.uk/chembl/target/inspect/CHEMBL2363062) pIC50 minimization and maximization
+* `LogP_optimization_demo.ipynb` -- optimization of logP to be in a drug-like region 
 from 0 to 5 according to [Lipinski's rule of five](https://en.wikipedia.org/wiki/Lipinski%27s_rule_of_five).
-* RecurrentQSAR-example-logp.ipynb -- training a Recurrent Neural Network to predict logP from SMILES
+* `RecurrentQSAR-example-logp.ipynb` -- training a Recurrent Neural Network to predict logP from SMILES
 using [OpenChem](https://github.com/Mariewelt/OpenChem) toolkit.
 
 **Disclaimer**: JAK2 demo uses Random Forest predictor instead of Recurrent Neural Network,
@@ -67,3 +66,5 @@ If you use this code or data, please cite:
 
 ### ReLeaSE method paper:
 Mariya Popova, Olexandr Isayev, Alexander Tropsha. *Deep Reinforcement Learning for de-novo Drug Design*. Science Advances, 2018, Vol. 4, no. 7, eaap7885. DOI: [10.1126/sciadv.aap7885](http://dx.doi.org/10.1126/sciadv.aap7885)
+
+TODO: Implement multi-objective optimization
