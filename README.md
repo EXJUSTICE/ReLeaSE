@@ -37,6 +37,13 @@ pip install pip_requirements.txt
 # Add new kernel to the list of jupyter notebook kernels
 python -m ipykernel install --user --name release --display-name ReLeaSE
 ```
+## Contents
+*  `stackRNN.py`<br/>Defines the architecture and methods of the generator model. Includes codes for supervised training for the pre-trianing process, and SMILES string generation for the maining RL loop.
+
+*  `iterator.py`<br/>Abstract base class for SMILES string iteration
+*  `rnn_predictor.py`<br/> Trained predictor class for properties based on SMILES input. Works in tandem with `predictor.py`, which handles QSAR property prediction specifically.
+*  `reinforcement.py`<br/> Environment class. Defines the chemical methods and markov decision process for molecular generation. In this repo, also intializes agent and allows access to training methods. Note that reward implementation is provided in the example notebooks, as this class only provides the abstract implementation
+*  `data.py`& `utils.py`Various auxilliary methods related to SMILES representation and OS functions.
 
 ## Demos
 
@@ -60,5 +67,3 @@ If you use this code or data, please cite:
 
 ### ReLeaSE method paper:
 Mariya Popova, Olexandr Isayev, Alexander Tropsha. *Deep Reinforcement Learning for de-novo Drug Design*. Science Advances, 2018, Vol. 4, no. 7, eaap7885. DOI: [10.1126/sciadv.aap7885](http://dx.doi.org/10.1126/sciadv.aap7885)
-
-TODO: Add module breakdown
